@@ -56,7 +56,7 @@ def print_results(word_totals, overall_total):
 
     print("MEETING TOTALS")
     print("- " + format(overall_total, ',') + " words")
-    print("- " + str(number_of_speakers) + " speakers\n")
+    print("- " + str(number_of_speakers) + " speaker(s)\n")
     print("SPEAKER TOTALS")
 
     for speaker, total in word_totals.items():
@@ -79,4 +79,4 @@ def analyze_teams_transcript(file_name):
               Exception message: {str(e)}")
 
 
-analyze_teams_transcript('../../transcript.vtt')
+analyze_teams_transcript('../transcript.vtt')

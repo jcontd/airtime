@@ -34,6 +34,12 @@ def read_transcript(file_name):
 
 def calculate_word_totals(speaker_texts):
     """Calculates word totals both for each speaker and the overall meeting."""
+    for key, value in speaker_texts.items():
+        if not isinstance(key, str):
+            raise TypeError('All keys in speaker_texts must be strings.')
+        if not isinstance(value, str):
+            raise TypeError('All values in speaker_texts must be strings.')
+
     word_totals = {}
 
     for speaker, text in speaker_texts.items():
@@ -53,7 +59,7 @@ def print_results(word_totals, overall_total):
 
     print("MEETING TOTALS")
     print("- " + format(overall_total, ',') + " words")
-    print("- " + str(number_of_speakers) + " speakers\n")
+    print("- " + str(number_of_speakers) + " speaker(s)\n")
     print("SPEAKER TOTALS")
 
     for speaker, total in word_totals.items():
@@ -64,16 +70,22 @@ def print_results(word_totals, overall_total):
 
 def analyze_zoom_transcript(file_name):
     """Processes a Zoom transcript file."""
+    if not isinstance(file_name, str):
+        print("An error occurred: file_name must be a string.")
+        return
+
     try:
         speaker_texts = read_transcript(file_name)
         if speaker_texts is None:
             return
         word_totals, overall_total = calculate_word_totals(speaker_texts)
         print_results(word_totals, overall_total)
+    except FileNotFoundError:
+        print(f"The file {file_name} could not be found.")
     except Exception as e:
-        print("An unexpected error occurred while analyzing the transcript.")
-        print(f"Exception type: {type(e).__name__}, \
-              Exception message: {str(e)}")
+        print(f"""An unexpected error occurred while
+              analyzing the transcript: {e}""")
 
 
-analyze_zoom_transcript('../../transcript.txt')
+if __name__ == "__main__":
+    analyze_zoom_transcript('../transcript.txt')

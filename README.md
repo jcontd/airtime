@@ -51,7 +51,7 @@ Example output:
 ```
 MEETING TOTALS
 - 1,000 words
-- 2 speakers
+- 2 speaker(s)
 
 SPEAKER TOTALS
 - Holmes: 900 words (90.0% of meeting)
