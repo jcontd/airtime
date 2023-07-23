@@ -1,4 +1,5 @@
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-brightgreen.svg)](https://www.gnu.org/licenses/agpl-3.0)
+![Version](https://img.shields.io/badge/version-v1.0.0-blue)
 
 # Airtime
 
