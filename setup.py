@@ -5,7 +5,7 @@ with open("README.md", "r") as file:
 
 setup(
     name="airtime",
-    version="1.0.0",
+    version="1.0.1",
     author="Jana M. Perkins",
     author_email="mailroom@jcontd.com",
     description="""A package for analyzing transcripts
