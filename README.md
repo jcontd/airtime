@@ -1,3 +1,5 @@
+[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-brightgreen.svg)](https://www.gnu.org/licenses/agpl-3.0)
+
 # Airtime
 
 This package contains Python scripts for analyzing meeting transcripts from Zoom and Microsoft Teams meetings. The scripts read the transcript files, calculate spoken word totals for each speaker, and print out the analyzed results.
