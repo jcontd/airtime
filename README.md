@@ -6,7 +6,7 @@ The intended purpose of this package is to allow users to determine what percent
 
 ## Version
 
-The latest version of this package is v1.0.0-alpha.
+The latest version of this package is v1.0.0.
 
 ## Installation and requirements
 
@@ -26,19 +26,22 @@ After installing the package, it can be used as follows:
 ```
 from airtime import zoom_analzyer
 
-zoom_analzyer.analyze_zoom_transcript('path_to_your_transcript.txt')
-
+zoom_analzyer.analyze_zoom_transcript("transcript.txt")
 ```
+
+**Note**: recent releases of Zoom will output several transcript formats, but only one of these formats will preserve the speaker names which are essential to this analysis. To access the required transcript format, *before the meeting ends*, navigate to Captions > View full transcript > Save transcript.
+
+&nbsp;
+&nbsp;
 
 - For analyzing transcripts from Microsoft Teams meetings:
 
 ```
 from airtime import teams_analzyer
 
-teams_analzyer.analyze_teams_transcript('path_to_your_transcript.vtt')
+teams_analzyer.analyze_teams_transcript("transcript.vtt")
 ```
 
-Note the different file formats for the respective transcript files.
 
 ## Output
 These scripts print:

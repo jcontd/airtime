@@ -1,8 +1,8 @@
 import os
 import pytest
-from ..zoom_analyzer import (
+from ..teams_analyzer import (
     read_transcript, calculate_word_totals,
-    print_results, analyze_zoom_transcript
+    print_results, analyze_teams_transcript
 )
 
 
@@ -17,8 +17,11 @@ def transcript_file(transcript_content):
 
 @pytest.fixture
 def transcript_content():
-    return """[Speaker A] 00:00:01 \n
-            Hello, world!\n[Speaker B] 00:00:02 \nGoodbye, world!"""
+    return ("00:00:00.000 --> 00:00:00.200\n"
+            "<v Speaker A>Hello, world!</v>\n"
+            "\n"
+            "00:00:04.480 --> 00:00:11.120\n"
+            "<v Speaker B>Goodbye, world!</v>\n")
 
 
 @pytest.fixture
@@ -85,19 +88,19 @@ def test_print_results(capsys, expected_output):
     assert captured.out == expected_output
 
 
-def test_analyze_zoom_transcript(capsys, transcript_file, expected_output):
-    analyze_zoom_transcript(transcript_file)
+def test_analyze_teams_transcript(capsys, transcript_file, expected_output):
+    analyze_teams_transcript(transcript_file)
 
     captured = capsys.readouterr()
 
-    assert captured.out == expected_output
+    assert captured.out.strip() == expected_output.strip()
 
 
-def test_analyze_zoom_transcript_with_invalid_input(capsys):
-    analyze_zoom_transcript("nonexistent_file.txt")
+def test_analyze_teams_transcript_with_invalid_input(capsys):
+    analyze_teams_transcript("nonexistent_file.vtt")
     captured = capsys.readouterr()
-    assert "The file nonexistent_file.txt could not be found." in captured.out
+    assert "The file nonexistent_file.vtt could not be found." in captured.out
 
-    analyze_zoom_transcript(123)
+    analyze_teams_transcript(123)
     captured = capsys.readouterr()
     assert "An error occurred: file_name must be a string." in captured.out
