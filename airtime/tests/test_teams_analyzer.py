@@ -1,3 +1,11 @@
+# Name: Airtime
+# Description: A package for analyzing meeting transcripts to determine speaking time distribution among participants.
+
+# Copyright 2023 Jana M. Perkins.
+# See the LICENSE file at the top-level directory of this distribution and at
+# https://github.com/jcontd/airtime/blob/main/LICENSE
+
+
 import os
 import pytest
 from ..teams_analyzer import (
