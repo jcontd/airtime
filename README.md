@@ -1,5 +1,5 @@
 [![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-brightgreen.svg)](https://www.gnu.org/licenses/agpl-3.0)
-![Version](https://img.shields.io/badge/version-v1.0.1-blue)
+![Version](https://img.shields.io/badge/version-v1.0.2-blue)
 
 # Airtime
 
@@ -25,7 +25,7 @@ This tool aims to provide those who regularly undertake collaborative work in fi
 
 ## Version
 
-The latest version of this package is v1.0.1.
+The latest version of this package is v1.0.2.
 
 ## Installation and requirements
 
