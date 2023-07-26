@@ -3,9 +3,25 @@
 
 # Airtime
 
-This package contains Python scripts for analyzing meeting transcripts from Zoom and Microsoft Teams meetings. The scripts read the transcript files, calculate spoken word totals for each speaker, and print out the analyzed results.
+This package contains Python scripts for analyzing transcript files from Zoom and Microsoft Teams meetings.
 
-The intended purpose of this package is to allow users to determine what percentage of a given meeting was allocated to which speaker(s), with the goal of fostering better collaborative environments among teams in future meetings.
+These scripts function by reading in a transcript, calculating the spoken word totals for each of its speakers, and displaying the analyzed results. The intended purpose of this package is to allow users to determine what percentage of a given meeting was allocated to which speaker(s).
+
+## Why this matters
+
+Airtime is a project management tool which operates from the assumption that teams and organizations could only stand to benefit from an increase in perspectives from and participation among their members. The first step, of course, remains to create good teams. Once that’s been accomplished, the second step is to then allow all those involved the necessary time and space to make the contributions for which their expertise was initially sought out.
+
+This tool aims to provide those who regularly undertake collaborative work in fields that base their decisions on statistical findings with the necessary data to foster more genuinely collaborative work environments. It’s one thing, in other words, for a team member to convey to their project lead that they often have their contributions minimized in meetings while others monopolize the floor; it’s quite another for them to be able to demonstrate that the data support their experiences and that there’s room to move forward with a data-driven solution.
+
+## Key features
+
+✅ Ease of use: Just 3 lines of code from installation to analysis.
+
+✅ Privacy and security: All analyses run locally on your machine.
+
+✅ Efficient computing: Lightweight algorithms for fast processing times.
+
+*Coming soon: a step-by-step implementation guide for non-developers with no prior Python experience. If you’d like to be notified when this becomes available, please send me an email.*
 
 ## Version
 
@@ -66,7 +82,7 @@ SPEAKER TOTALS
 
 ## Contributing
 
-Contributions to this package are welcome, and especially in the form of introducing additional transcript formats from other services (e.g., Google Meet). Please open an issue to discuss your idea or submit a Pull Request.
+Contributions to this package are welcome, and especially in the form of introducing additional transcript formats from other services (e.g., Google Meet). Please open an issue to discuss your idea or submit a pull request.
 
 ## License
 
